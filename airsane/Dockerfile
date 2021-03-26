@@ -2,7 +2,7 @@ FROM ubuntu
 
 WORKDIR /srv
 
-RUN apt update && DEBIAN_FRONTEND="noninteractive" apt-get install -y libsane-dev libjpeg-dev libpng-dev libavahi-client-dev libusb-1.*-dev git cmake g++ avahi-daemon git cmake g++ sane-utils
+RUN apt-get update && DEBIAN_FRONTEND="noninteractive" apt-get install -y libsane-dev libjpeg-dev libpng-dev libavahi-client-dev libusb-1.*-dev git cmake g++ avahi-daemon git cmake g++ sane-utils
 COPY scripts /srv/scripts
 
 RUN git clone https://github.com/SimulPiscator/AirSane.git /srv/airsane
